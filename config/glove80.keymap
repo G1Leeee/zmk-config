@@ -71,37 +71,6 @@ endif {
     #ifdef BT_DISC_CMD
 
     behaviors {
-        bt_0: bt_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_0>, <&bt BT_DISC 0>;
-        };
-
-        bt_1: bt_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_1>, <&bt BT_DISC 1>;
-        };
-
-        bt_2: bt_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_2>, <&bt BT_DISC 2>;
-        };
-
-        bt_3: bt_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_3";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_3>, <&bt BT_DISC 3>;
-        };
     };
 
     macros {
@@ -595,8 +564,8 @@ endif {
 &to 0        &to 2            &to 3            &to 4            &to 7            &none                                                               &none  &none  &none  &none  &none  &none
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &none  &none  &none  &none  &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none  &none  &none  &none  &none
+&sys_reset   &none            &none            &none            &none            &none            &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
+&none        &none            &none            &none            &none                             &none  &none  &out OUT_USB    &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
